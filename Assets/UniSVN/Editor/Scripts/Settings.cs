@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace CalmIsland.Util.SVN
+namespace UniSVN
 {
 	public class Settings : ScriptableObject
 	{

@@ -5,7 +5,7 @@ using UnityEditor;
 using UnityEngine;
 using Debug = UnityEngine.Debug;
 
-namespace CalmIsland.Util.SVN
+namespace UniSVN
 {
 	public static class SvnCommands
 	{

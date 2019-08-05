@@ -4,7 +4,7 @@ using System.IO;
 using UnityEngine;
 using Debug = UnityEngine.Debug;
 
-namespace CalmIsland.Util.SVN
+namespace UniSVN
 {
 	public class SVNFileStatusCache
 	{

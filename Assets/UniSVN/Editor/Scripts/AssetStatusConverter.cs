@@ -1,6 +1,6 @@
 ﻿using System.Linq;
 
-namespace CalmIsland.Util.SVN
+namespace UniSVN
 {
 	public static class AssetStatusConverter
 	{

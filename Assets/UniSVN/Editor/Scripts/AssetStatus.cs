@@ -1,4 +1,4 @@
-﻿namespace CalmIsland.Util.SVN
+﻿namespace UniSVN
 {
 	public enum AssetStatus
 	{

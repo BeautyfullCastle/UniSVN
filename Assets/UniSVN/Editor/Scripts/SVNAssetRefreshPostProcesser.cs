@@ -1,6 +1,6 @@
 ﻿using UnityEditor;
 
-namespace CalmIsland.Util.SVN
+namespace UniSVN
 {
 	public class SVNAssetRefreshPostProcesser : AssetPostprocessor
 	{

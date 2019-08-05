@@ -2,11 +2,13 @@
 using UnityEditor;
 using UnityEngine;
 
-namespace CalmIsland.Util.SVN
+namespace UniSVN
 {
 	public static class SettingsUpdater
 	{
-		private static string assetPath = "Assets/Common/SVNTool/Editor/Settings/SvnSettings.asset";
+		private static readonly string folderName = "Settings";
+		private static readonly string assetName = "SvnSettings.asset";
+		private static readonly string assetPath = string.Format("{0}/{1}/{2}", Path.rootPath, folderName, assetName);
 
 		private static Settings settings = null;
 
@@ -41,9 +43,9 @@ namespace CalmIsland.Util.SVN
 			settings = AssetDatabase.LoadAssetAtPath<Settings>(assetPath);
 			if (settings == null)
 			{
-				if (AssetDatabase.IsValidFolder("Assets/Common/SVNTool/Editor/Settings") == false)
+				if (AssetDatabase.IsValidFolder(Path.rootPath + "/" + folderName) == false)
 				{
-					AssetDatabase.CreateFolder("Assets/Common/SVNTool/Editor", "Settings");
+					AssetDatabase.CreateFolder(Path.rootPath, folderName);
 				}
 
 				settings = ScriptableObject.CreateInstance<Settings>();

@@ -1,7 +1,7 @@
 ﻿using UnityEditor;
 using UnityEngine;
 
-namespace CalmIsland.Util.SVN
+namespace UniSVN
 {
 	[InitializeOnLoad]
 	public class SvnProjectWindowProcesser
@@ -13,16 +13,16 @@ namespace CalmIsland.Util.SVN
 		private static Texture conflictTexture;
 		private static Texture externalTexture;
 
-		private static string iconsFolderPath = "Assets/Common/SVNTool/Editor/Icons/";
+		private static readonly string iconsFolderPath = Path.rootPath + "/Icons";
 
 		static SvnProjectWindowProcesser()
 		{
-			commitedTexture = AssetDatabase.LoadAssetAtPath<Texture>(iconsFolderPath + "icon-commited.png");
-			modifiedTexture = AssetDatabase.LoadAssetAtPath<Texture>(iconsFolderPath + "icon-modify.png");
-			newTexture = AssetDatabase.LoadAssetAtPath<Texture>(iconsFolderPath + "icon-new.png");
-			addTexture = AssetDatabase.LoadAssetAtPath<Texture>(iconsFolderPath + "icon-add.png");
-			conflictTexture = AssetDatabase.LoadAssetAtPath<Texture>(iconsFolderPath + "icon-conficted.png");
-			externalTexture = AssetDatabase.LoadAssetAtPath<Texture>(iconsFolderPath + "icon-external-link.png");
+			commitedTexture = AssetDatabase.LoadAssetAtPath<Texture>(iconsFolderPath + "/icon-commited.png");
+			modifiedTexture = AssetDatabase.LoadAssetAtPath<Texture>(iconsFolderPath + "/icon-modify.png");
+			newTexture = AssetDatabase.LoadAssetAtPath<Texture>(iconsFolderPath + "/icon-new.png");
+			addTexture = AssetDatabase.LoadAssetAtPath<Texture>(iconsFolderPath + "/icon-add.png");
+			conflictTexture = AssetDatabase.LoadAssetAtPath<Texture>(iconsFolderPath + "/icon-conficted.png");
+			externalTexture = AssetDatabase.LoadAssetAtPath<Texture>(iconsFolderPath + "/icon-external-link.png");
 			EditorApplication.projectWindowItemOnGUI += OnProjectItemGUI;
 		}
 
@@ -77,6 +77,7 @@ namespace CalmIsland.Util.SVN
 				return;
 			}
 
+			Debug.Log(icon.name);
 			GUI.DrawTexture(new Rect(selectionRect.xMin - 8, selectionRect.yMin - 2, 16, 16), icon);
 		}
 	}
