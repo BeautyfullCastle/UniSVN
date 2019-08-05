@@ -77,7 +77,6 @@ namespace UniSVN
 				return;
 			}
 
-			Debug.Log(icon.name);
 			GUI.DrawTexture(new Rect(selectionRect.xMin - 8, selectionRect.yMin - 2, 16, 16), icon);
 		}
 	}
