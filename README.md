@@ -37,8 +37,9 @@ Here is an explanation of icons below.
 ![icon-committed](Assets/UniSVN/Editor/Icons/icon-committed.png)
 - The asset is synchronized with the repository.
 
-![icon-added](Assets/UniSVN/Editor/Icons/icon-added.png)
-- The asset or meta file is added.
+![icon-new](Assets/UniSVN/Editor/Icons/icon-new.png)
+- You made the asset.
+- Or You FORGOT to commit meta file!
 
 ![icon-modified](Assets/UniSVN/Editor/Icons/icon-modified.png)
 - The asset or meta file is modified.
