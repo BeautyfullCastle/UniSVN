@@ -6,18 +6,18 @@ namespace UniSVN
 	[InitializeOnLoad]
 	public class SvnProjectWindowProcesser
 	{
-		private static Texture modifiedTexture;
-		private static Texture commitedTexture;
-		private static Texture newTexture;
-		private static Texture addTexture;
-		private static Texture conflictTexture;
-		private static Texture externalTexture;
+		private static readonly Texture modifiedTexture;
+		private static readonly Texture committedTexture;
+		private static readonly Texture newTexture;
+		private static readonly Texture addTexture;
+		private static readonly Texture conflictTexture;
+		private static readonly Texture externalTexture;
 
 		private static readonly string iconsFolderPath = Path.rootPath + "/Icons";
 
 		static SvnProjectWindowProcesser()
 		{
-			commitedTexture = AssetDatabase.LoadAssetAtPath<Texture>(iconsFolderPath + "/icon-commited.png");
+			committedTexture = AssetDatabase.LoadAssetAtPath<Texture>(iconsFolderPath + "/icon-commited.png");
 			modifiedTexture = AssetDatabase.LoadAssetAtPath<Texture>(iconsFolderPath + "/icon-modify.png");
 			newTexture = AssetDatabase.LoadAssetAtPath<Texture>(iconsFolderPath + "/icon-new.png");
 			addTexture = AssetDatabase.LoadAssetAtPath<Texture>(iconsFolderPath + "/icon-add.png");
@@ -45,7 +45,7 @@ namespace UniSVN
 			switch (type)
 			{
 				case AssetStatus.None:
-					icon = commitedTexture;
+					icon = committedTexture;
 					break;
 
 				case AssetStatus.Added:
