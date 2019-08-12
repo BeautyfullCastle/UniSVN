@@ -48,34 +48,34 @@ Now you can keep watching how synchronized assets' status inside Unity's project
 
 <img src="Assets/UniSVN/Editor/Icons/icon-committed.png" width="32">
 
-* #### The asset is synchronized with the repository.
+* The asset is synchronized with the repository.
 
 
 <img src="Assets/UniSVN/Editor/Icons/icon-new.png" width="32">
 
-* #### You made the asset.
+* You made the asset.
 
-* #### Or You FORGOT to commit meta file!
+* Or You FORGOT to commit meta file!
 
 
 <img src="Assets/UniSVN/Editor/Icons/icon-modified.png" width="32">
 
-* #### The asset or meta file is modified.
+* The asset or meta file is modified.
 
 
 <img src="Assets/UniSVN/Editor/Icons/icon-conflicted.png" width="32">
 
-#### The asset is conflicted. It happens sometimes when you updated without committed the asset.
+* The asset is conflicted. It happens sometimes when you updated without committed the asset.
 
 
 <img src="Assets/UniSVN/Editor/Icons/icon-external.png" width="32">
 
-#### You linked external with the asset.
+* You linked external with the asset.
 
 
 <img src="Assets/UniSVN/Editor/Icons/icon-added.png" width="32">
 
-#### You added the asset manually.
+* You added the asset manually.
 
 
 
