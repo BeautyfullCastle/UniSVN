@@ -89,18 +89,20 @@ Now you can keep watching how synchronized assets' status inside Unity's project
 
 ## SvnSettings
 
-<img src="Images/Settings.png">
+You can set some options in here.
 
-The path is <Assets/Common/SVNTool/Editor/Settings/SvnSettings.asset>.
+SVNSettings.asset's path is "Assets/Common/SVNTool/Editor/Settings/SvnSettings.asset".
+
+![Settings](Images/Settings.png)
 
 
 * Show Icon
 
-Check it if you want to see Asset Status.
+    + Check it if you want to see Asset Status.
 
 * Tortoise Svn Path
 
-You don't need to modify this path if you installed Tortoise SVN to default path.
+    + You don't need to modify this path if you installed Tortoise SVN to default path.
 
 
 # References
