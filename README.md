@@ -13,6 +13,8 @@ To prevent this matter, I made UniSVN to do almost everything about SVN’s func
 
 * SVN
 
+* Unity Version for this project is 2019.1.x +.
+
 
 # Features
 
