@@ -1,9 +1,9 @@
 # Introduction
-  As you know, a meta file should be a set of asset file in Unity. If you upload an asset file without a meta file, an asset file’s GUID will be generated differently per each user’s computer. And then, every object that linked that asset will be missed.
+As you know, a meta file should be a set of asset file in Unity. If you upload an asset file without a meta file, an asset file’s GUID will be generated differently per each user’s computer. And then, every object that linked that asset will be missed.
   
-  But if you working with other team members who don’t familiar with this process like design or art team, it’s so hard to manage or educate them to not mistake this kind of matters(This is also what I experience with it!)
+But if you working with other team members who don’t familiar with this process like design or art team, it’s so hard to manage or educate them to not mistake this kind of matters(This is also what I experience with it!)
   
-  To prevent this matter, I made UniSVN to do almost everything about SVN’s functions inside Unity!
+To prevent this matter, I made UniSVN to do almost everything about SVN’s functions inside Unity!
 
 # Features
 
@@ -15,27 +15,27 @@ If you excute svn commands like update, commit using UniSVN's menu, **the meta f
 
 ### Command List
 
-#### Settings	[Shift+Ctrl+Alt+T]
+* #### Settings	[Shift+Ctrl+Alt+T]
 
-#### Update		[Shift+Ctrl+Alt+U]
+* #### Update		[Shift+Ctrl+Alt+U]
 
-#### Commit	[Shift+Ctrl+Alt+C]
+* #### Commit	[Shift+Ctrl+Alt+C]
 
-#### Show Log	[Shift+Ctrl+Alt+L]
+* #### Show Log	[Shift+Ctrl+Alt+L]
 
-#### Checkout	[Shift+Ctrl+Alt+H]
+* #### Checkout	[Shift+Ctrl+Alt+H]
 
-#### Clean up	[Shift+Ctrl+Alt+E]
+* #### Clean up	[Shift+Ctrl+Alt+E]
 
-#### Revert		[Shift+Ctrl+Alt+R]
+* #### Revert		[Shift+Ctrl+Alt+R]
 
-#### Resolve	[Shift+Ctrl+Alt+S]
+* #### Resolve	[Shift+Ctrl+Alt+S]
 
-#### Merge		[Shift+Ctrl+Alt+M]
+* #### Merge		[Shift+Ctrl+Alt+M]
 
-#### Properties	[Shift+Ctrl+Alt+P]
+* #### Properties	[Shift+Ctrl+Alt+P]
 
-#### Repo-brower	[Shift+Ctrl+Alt+B]
+* #### Repo-brower	[Shift+Ctrl+Alt+B]
 
 
 ## Asset Status
@@ -47,25 +47,39 @@ Now you can keep watching how synchronized assets' status inside Unity's project
 ### Explanation of icons
 
 <img src="Assets/UniSVN/Editor/Icons/icon-committed.png" width="32">
-- The asset is synchronized with the repository.
+
+* #### The asset is synchronized with the repository.
+
 
 <img src="Assets/UniSVN/Editor/Icons/icon-new.png" width="32">
-- You made the asset.
-- Or You FORGOT to commit meta file!
+
+* #### You made the asset.
+
+* #### Or You FORGOT to commit meta file!
+
 
 <img src="Assets/UniSVN/Editor/Icons/icon-modified.png" width="32">
-- The asset or meta file is modified.
+
+* #### The asset or meta file is modified.
+
 
 <img src="Assets/UniSVN/Editor/Icons/icon-conflicted.png" width="32">
-- The asset is conflicted. It happens sometimes when you updated without committed the asset.
+
+#### The asset is conflicted. It happens sometimes when you updated without committed the asset.
+
 
 <img src="Assets/UniSVN/Editor/Icons/icon-external.png" width="32">
-- You linked external with the asset.
+
+#### You linked external with the asset.
+
 
 <img src="Assets/UniSVN/Editor/Icons/icon-added.png" width="32">
-- You added the asset manually.
+
+#### You added the asset manually.
+
 
 
 # References
+
 * https://github.com/wlgys8/UnitySVN
 
