@@ -4,7 +4,7 @@ namespace UniSVN
 {
 	public static class AssetStatusConverter
 	{
-		public static AssetStatus Convert(string status)
+		public static AssetStatus StringToEnum(string status)
 		{
 			char cStatus = status.First();
 			switch (cStatus)

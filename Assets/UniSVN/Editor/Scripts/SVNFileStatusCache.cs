@@ -71,7 +71,7 @@ namespace UniSVN
 					var path = splitedOutput[splitedOutput.Length - 1];
 					path = path.Replace("\r", string.Empty);
 
-					SetFileStatus(path, AssetStatusConverter.Convert(status));
+					SetFileStatus(path, AssetStatusConverter.StringToEnum(status));
 				}
 			}
 			else
@@ -89,7 +89,7 @@ namespace UniSVN
 				if (path.Contains(".meta"))
 				{
 					path = path.Replace(".meta", string.Empty);
-					SetCache(path, status);
+					SetStatus(path, status);
 					return;
 				}
 
@@ -99,7 +99,9 @@ namespace UniSVN
 					return;
 				}
 
-				var absolutePath = Application.dataPath + path.Replace("Assets", string.Empty);
+				// If this directory status is NEW,
+				// change child directories and files status to NEW also.
+				var absolutePath = GetAbsolutePath(path);
 				string[] filePaths = Directory.GetFiles(absolutePath, "*", SearchOption.AllDirectories);
 				string[] folderPaths = Directory.GetDirectories(absolutePath, "*", SearchOption.AllDirectories);
 				var paths = new List<string>();
@@ -108,8 +110,8 @@ namespace UniSVN
 				paths.RemoveAll((x) => x.Contains(".meta"));
 				for (int i = 0; i < paths.Count; i++)
 				{
-					paths[i] = paths[i].Replace(Application.dataPath, "Assets").Replace("\\", "/");
-					SetCache(paths[i], status);
+					paths[i] = GetRelativePath(paths[i]);
+					SetStatus(paths[i], status);
 				}
 			}
 			else
@@ -119,11 +121,31 @@ namespace UniSVN
 					path = path.Replace(".meta", string.Empty);
 				}
 
-				SetCache(path, status);
+				// Parent folders status follow file's status
+				// if it's not in a normal status.
+				var parentDirectoryInfo = Directory.GetParent(GetAbsolutePath(path));
+				do
+				{
+					string relativePath = GetRelativePath(parentDirectoryInfo.FullName);
+					SetStatus(relativePath, status);
+					parentDirectoryInfo = parentDirectoryInfo.Parent;
+				} while (parentDirectoryInfo.FullName.Contains("Assets"));
+
+				SetStatus(path, status);
 			}
 		}
 
-		private static void SetCache(string path, AssetStatus status)
+		private static string GetRelativePath(string path)
+		{
+			return path.Replace("\\", "/").Replace(Application.dataPath, "Assets");
+		}
+
+		private static string GetAbsolutePath(string path)
+		{
+			return Application.dataPath + path.Replace("Assets", string.Empty);
+		}
+
+		private static void SetStatus(string path, AssetStatus status)
 		{
 			if (statusCache.ContainsKey(path))
 			{
@@ -135,7 +157,7 @@ namespace UniSVN
 			}
 		}
 
-		public static AssetStatus GetFileStatus(string path)
+		public static AssetStatus GetStatus(string path)
 		{
 			if (string.IsNullOrEmpty(path))
 			{

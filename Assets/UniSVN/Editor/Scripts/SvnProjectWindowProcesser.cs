@@ -39,7 +39,7 @@ namespace UniSVN
 				return;
 			}
 
-			AssetStatus type = SVNFileStatusCache.GetFileStatus(assetPath);
+			AssetStatus type = SVNFileStatusCache.GetStatus(assetPath);
 
 			Texture icon = null;
 			switch (type)
