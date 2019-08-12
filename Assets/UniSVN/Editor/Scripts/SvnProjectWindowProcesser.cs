@@ -9,8 +9,8 @@ namespace UniSVN
 		private static readonly Texture modifiedTexture;
 		private static readonly Texture committedTexture;
 		private static readonly Texture newTexture;
-		private static readonly Texture addTexture;
-		private static readonly Texture conflictTexture;
+		private static readonly Texture addedTexture;
+		private static readonly Texture conflictedTexture;
 		private static readonly Texture externalTexture;
 
 		private static readonly string iconsFolderPath = Path.rootPath + "/Icons";
@@ -18,11 +18,11 @@ namespace UniSVN
 		static SvnProjectWindowProcesser()
 		{
 			committedTexture = AssetDatabase.LoadAssetAtPath<Texture>(iconsFolderPath + "/icon-committed.png");
-			modifiedTexture = AssetDatabase.LoadAssetAtPath<Texture>(iconsFolderPath + "/icon-modify.png");
+			modifiedTexture = AssetDatabase.LoadAssetAtPath<Texture>(iconsFolderPath + "/icon-modified.png");
 			newTexture = AssetDatabase.LoadAssetAtPath<Texture>(iconsFolderPath + "/icon-new.png");
-			addTexture = AssetDatabase.LoadAssetAtPath<Texture>(iconsFolderPath + "/icon-add.png");
-			conflictTexture = AssetDatabase.LoadAssetAtPath<Texture>(iconsFolderPath + "/icon-conficted.png");
-			externalTexture = AssetDatabase.LoadAssetAtPath<Texture>(iconsFolderPath + "/icon-external-link.png");
+			addedTexture = AssetDatabase.LoadAssetAtPath<Texture>(iconsFolderPath + "/icon-added.png");
+			conflictedTexture = AssetDatabase.LoadAssetAtPath<Texture>(iconsFolderPath + "/icon-conflicted.png");
+			externalTexture = AssetDatabase.LoadAssetAtPath<Texture>(iconsFolderPath + "/icon-external.png");
 			EditorApplication.projectWindowItemOnGUI += OnProjectItemGUI;
 		}
 
@@ -49,7 +49,7 @@ namespace UniSVN
 					break;
 
 				case AssetStatus.Added:
-					icon = addTexture;
+					icon = addedTexture;
 					break;
 
 				case AssetStatus.Modify:
@@ -64,7 +64,7 @@ namespace UniSVN
 					break;
 
 				case AssetStatus.Conflict:
-					icon = conflictTexture;
+					icon = conflictedTexture;
 					break;
 
 				case AssetStatus.External:
