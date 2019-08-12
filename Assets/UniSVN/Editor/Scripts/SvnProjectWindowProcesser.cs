@@ -17,7 +17,7 @@ namespace UniSVN
 
 		static SvnProjectWindowProcesser()
 		{
-			committedTexture = AssetDatabase.LoadAssetAtPath<Texture>(iconsFolderPath + "/icon-commited.png");
+			committedTexture = AssetDatabase.LoadAssetAtPath<Texture>(iconsFolderPath + "/icon-committed.png");
 			modifiedTexture = AssetDatabase.LoadAssetAtPath<Texture>(iconsFolderPath + "/icon-modify.png");
 			newTexture = AssetDatabase.LoadAssetAtPath<Texture>(iconsFolderPath + "/icon-new.png");
 			addTexture = AssetDatabase.LoadAssetAtPath<Texture>(iconsFolderPath + "/icon-add.png");
