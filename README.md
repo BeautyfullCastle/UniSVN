@@ -9,7 +9,7 @@
 
 #2 SVN Commands
 
-![Commands](Images for Readme/Commands.png)
+![Commands](Images/Commands.png)
 
 If you excute svn commands like update, commit using UniSVN's menu, the meta file will be added AUTOMATICALLY!
 
@@ -28,7 +28,7 @@ Repo-brower	[Shift+Ctrl+Alt+B]
 
 #2 Asset Status
 
-![Status](Images for Readme/Status.png)
+![Status](Images/Status.png)
 
 Now you can keep watching how synchronized assets' status inside Unity's project view.
 
