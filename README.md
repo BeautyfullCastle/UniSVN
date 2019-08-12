@@ -7,50 +7,62 @@
 
 # Features
 
-#2 SVN Commands
+## SVN Commands
 
 ![Commands](Images/Commands.png)
 
-If you excute svn commands like update, commit using UniSVN's menu, the meta file will be added AUTOMATICALLY!
+If you excute svn commands like update, commit using UniSVN's menu, **the meta file will be added automatically**!
 
-Settings	[Shift+Ctrl+Alt+T]
-Update		[Shift+Ctrl+Alt+U]
-Commit	[Shift+Ctrl+Alt+C]
-Show Log	[Shift+Ctrl+Alt+L]
-Checkout	[Shift+Ctrl+Alt+H]
-Clean up	[Shift+Ctrl+Alt+E]
-Revert		[Shift+Ctrl+Alt+R]
-Resolve	[Shift+Ctrl+Alt+S]
-Merge		[Shift+Ctrl+Alt+M]
-Properties	[Shift+Ctrl+Alt+P]
-Repo-brower	[Shift+Ctrl+Alt+B]
+### Command List
+
+#### Settings	[Shift+Ctrl+Alt+T]
+
+#### Update		[Shift+Ctrl+Alt+U]
+
+#### Commit	[Shift+Ctrl+Alt+C]
+
+#### Show Log	[Shift+Ctrl+Alt+L]
+
+#### Checkout	[Shift+Ctrl+Alt+H]
+
+#### Clean up	[Shift+Ctrl+Alt+E]
+
+#### Revert		[Shift+Ctrl+Alt+R]
+
+#### Resolve	[Shift+Ctrl+Alt+S]
+
+#### Merge		[Shift+Ctrl+Alt+M]
+
+#### Properties	[Shift+Ctrl+Alt+P]
+
+#### Repo-brower	[Shift+Ctrl+Alt+B]
 
 
-#2 Asset Status
+## Asset Status
 
 ![Status](Images/Status.png)
 
 Now you can keep watching how synchronized assets' status inside Unity's project view.
 
-Here is an explanation of icons below.
+### Explanation of icons
 
-![icon-committed](Assets/UniSVN/Editor/Icons/icon-committed.png)
+<img src="Assets/UniSVN/Editor/Icons/icon-committed.png" width="32">
 - The asset is synchronized with the repository.
 
-![icon-new](Assets/UniSVN/Editor/Icons/icon-new.png)
+<img src="Assets/UniSVN/Editor/Icons/icon-new.png" width="32">
 - You made the asset.
 - Or You FORGOT to commit meta file!
 
-![icon-modified](Assets/UniSVN/Editor/Icons/icon-modified.png)
+<img src="Assets/UniSVN/Editor/Icons/icon-modified.png" width="32">
 - The asset or meta file is modified.
 
-![icon-conflicted](Assets/UniSVN/Editor/Icons/icon-conflicted.png)
+<img src="Assets/UniSVN/Editor/Icons/icon-conflicted.png" width="32">
 - The asset is conflicted. It happens sometimes when you updated without committed the asset.
 
-![icon-external](Assets/UniSVN/Editor/Icons/icon-external.png)
+<img src="Assets/UniSVN/Editor/Icons/icon-external.png" width="32">
 - You linked external with the asset.
 
-![icon-added](Assets/UniSVN/Editor/Icons/icon-added.png)
+<img src="Assets/UniSVN/Editor/Icons/icon-added.png" width="32">
 - You added the asset manually.
 
 
