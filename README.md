@@ -5,6 +5,15 @@ But if you working with other team members who don’t familiar with this proces
   
 To prevent this matter, I made UniSVN to do almost everything about SVN’s functions inside Unity!
 
+# Requirements
+
+* Windows only for now.
+
+* Tortoise SVN
+
+* SVN
+
+
 # Features
 
 ## SVN Commands
@@ -77,6 +86,21 @@ Now you can keep watching how synchronized assets' status inside Unity's project
 
 * You added the asset manually.
 
+
+## SvnSettings
+
+<img src="Images/Settings.png">
+
+The path is <Assets/Common/SVNTool/Editor/Settings/SvnSettings.asset>.
+
+
+* Show Icon
+
+Check it if you want to see Asset Status.
+
+* Tortoise Svn Path
+
+You don't need to modify this path if you installed Tortoise SVN to default path.
 
 
 # References
