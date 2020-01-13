@@ -22,7 +22,7 @@ To prevent this matter, I made UniSVN to do almost everything about SVN’s func
 
 ![Commands](Images/Commands.png)
 
-If you excute svn commands like update, commit using UniSVN's menu, **the meta file will be added automatically**!
+If you excute SVN commands like update, commit using UniSVN's menu, **the meta file will be added automatically**!
 
 ### Command List
 
@@ -102,7 +102,7 @@ SVNSettings.asset's path is "Assets/UniSVN/Editor/Settings/SvnSettings.asset".
 
     + Check it if you want to see Asset Status.
 
-* Tortoise Svn Path
+* Tortoise SVN Path
 
     + You don't need to modify this path if you installed Tortoise SVN to default path.
 
