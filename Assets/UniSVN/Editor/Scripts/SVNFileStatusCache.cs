@@ -51,7 +51,7 @@ namespace UniSVN
 			string stdOutput = @proc.StandardOutput.ReadToEnd().Replace("\\", "/");
 			proc.StandardOutput.Close();
 
-			if (stdError == null || stdError.Length <= 0)
+			if (string.IsNullOrEmpty(stdError))
 			{
 				var outputArr = stdOutput.Split("\n".ToCharArray());
 				foreach (var output in outputArr)
