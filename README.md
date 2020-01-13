@@ -93,7 +93,7 @@ Now you can keep watching how synchronized assets' status inside Unity's project
 
 You can set some options in here.
 
-SVNSettings.asset's path is "Assets/Common/SVNTool/Editor/Settings/SvnSettings.asset".
+SVNSettings.asset's path is "Assets/UniSVN/Editor/Settings/SvnSettings.asset".
 
 ![Settings](Images/Settings.png)
 
